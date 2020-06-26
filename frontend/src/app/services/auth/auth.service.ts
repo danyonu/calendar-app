@@ -33,7 +33,8 @@ export class AuthService {
 
     return this.http.post('http://localhost:7000/graphql', requestBody, httpOptions)
       .pipe(
-        //map((data: any) => data.data.login),
+        map((data: any) => data.data.login),
+        tap((data: any) => {localStorage.setItem('TOKEN', data.token)}),
         catchError(this.handleError)
       );
   }
