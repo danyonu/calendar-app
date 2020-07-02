@@ -65,10 +65,14 @@ export class AuthService {
       );
   }
 
+  isLoggedIn() {
+    return !!localStorage.getItem('TOKEN');
+  }
+
   handleError(error: HttpErrorResponse) {
     console.log(error);
     if (!error.ok){
-      return throwError({message: 'some error message'}/*error.error.errors[0]*/);
+      return throwError(error.error.errors[0]);
     }
   }
 }

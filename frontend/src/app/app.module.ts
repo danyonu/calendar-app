@@ -13,6 +13,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MainPageComponent } from './pages/main-page/main-page.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { TokenInterceptor } from './interceptors/token.interceptor';
+import { CalendarComponent } from './components/calendar/calendar.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { TokenInterceptor } from './interceptors/token.interceptor';
     LoginComponent,
     MainPageComponent,
     PageNotFoundComponent,
+    CalendarComponent,
   ],
   imports: [
     BrowserModule,
