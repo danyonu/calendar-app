@@ -14,6 +14,7 @@ import { MainPageComponent } from './pages/main-page/main-page.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { TokenInterceptor } from './interceptors/token.interceptor';
 import { CalendarComponent } from './components/calendar/calendar.component';
+import { NavigationBarComponent } from './components/navigation-bar/navigation-bar.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { CalendarComponent } from './components/calendar/calendar.component';
     MainPageComponent,
     PageNotFoundComponent,
     CalendarComponent,
+    NavigationBarComponent,
   ],
   imports: [
     BrowserModule,

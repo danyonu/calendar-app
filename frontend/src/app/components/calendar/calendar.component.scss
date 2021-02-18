@@ -1,0 +1,20 @@
+.calendar-body {
+	.calendar-cell-container {
+		display: grid;
+		grid-template-columns: repeat(7, 1fr);
+		text-align: center;
+
+		.week-days {
+			border: 1px solid grey;
+		}
+
+		.current-day {
+			border: 1px solid;
+		}
+
+		.days {
+			height: 100px;
+			padding: 5px;
+		}
+	}
+}

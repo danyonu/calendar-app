@@ -1,1 +1,17 @@
-<p>calendar works!</p>
+<ca-navigation-bar></ca-navigation-bar>
+<div class="calendar-body">
+    <h2>{{months[data.month]}} {{data.year}}</h2>
+    <div class="calendar-cell-container">
+        <div *ngFor="let day of weekDays" class="week-days">{{day}}</div>
+        <button 
+            *ngFor="let day of data.daysArray" 
+            [ngClass]="{'current-day': day === currentDay && data.month === currentMonth}" 
+            class="days"
+            #dayBtn>
+            <span>{{day}}</span>
+            <div class="events">
+                <span>{{dayBtn}}</span>
+            </div>
+        </button>
+    </div>
+</div>
